@@ -1,0 +1,22 @@
+{
+    "eventappApp": {
+        "participant" : {
+            "home": {
+                "title": "Participants",
+                "createLabel": "Créer un nouveau Participant",
+                "createOrEditLabel": "Créer ou éditer un Participant"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Participant {{ id }} ?"
+            },
+            "detail": {
+                "title": "Participant"
+            },
+            "firstname": "Firstname",
+            "lastname": "Lastname",
+            "birthday": "Birthday",
+            "event": "event"
+        }
+    }
+}
+

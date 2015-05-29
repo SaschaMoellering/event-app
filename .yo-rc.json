@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "eventapp",
+    "packageName": "io.autoscaling.eventapp",
+    "packageFolder": "io/autoscaling/eventapp",
+    "authenticationType": "session",
+    "hibernateCache": "hazelcast",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "b35054169197567b3e9238ceb9a87e6fbf046a8a"
+  }
+}

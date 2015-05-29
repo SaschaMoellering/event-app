@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Event.
+    -->
+    <changeSet id="20150527145309" author="jhipster">
+        <createTable tableName="EVENT">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="description" type="varchar(255)"/>
+            <column name="date" type="timestamp"/>
+        </createTable>
+        <dropDefaultValue tableName="EVENT" columnName="date" columnDataType="datetime"/>
+
+        
+        <createTable tableName="EVENT_PARTICIPANT">
+            <column name="participants_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="events_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="events_id, participants_id" tableName="EVENT_PARTICIPANT"/>
+
+        <addForeignKeyConstraint baseColumnNames="events_id"
+                                 baseTableName="EVENT_PARTICIPANT"
+                                 constraintName="fk_event_participant_participant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="EVENT"/>
+
+        <addForeignKeyConstraint baseColumnNames="participants_id"
+                                 baseTableName="EVENT_PARTICIPANT"
+                                 constraintName="fk_participant_participant_event_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="PARTICIPANT"/>
+        
+    </changeSet>
+</databaseChangeLog>

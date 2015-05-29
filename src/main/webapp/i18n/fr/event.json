@@ -1,0 +1,22 @@
+{
+    "eventappApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Créer un nouveau Event",
+                "createOrEditLabel": "Créer ou éditer un Event"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Event {{ id }} ?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "name": "Name",
+            "description": "Description",
+            "date": "Date",
+            "participant": "participant"
+        }
+    }
+}
+

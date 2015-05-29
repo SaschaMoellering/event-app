@@ -1,0 +1,58 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "event",
+            "relationshipNameCapitalized": "Event",
+            "relationshipFieldName": "event",
+            "otherEntityName": "event",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Event",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "participant"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstname",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Firstname",
+            "fieldNameUnderscored": "firstname",
+            "fieldInJavaBeanMethod": "Firstname",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "lastname",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Lastname",
+            "fieldNameUnderscored": "lastname",
+            "fieldInJavaBeanMethod": "Lastname",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "birthday",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "Birthday",
+            "fieldNameUnderscored": "birthday",
+            "fieldInJavaBeanMethod": "Birthday",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150527145423",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="eventappApp.participant.detail.title">Participant</span> {{participant.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="eventappApp.participant.firstname">Firstname</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{participant.firstname}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="eventappApp.participant.lastname">Lastname</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{participant.lastname}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="eventappApp.participant.birthday">Birthday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{participant.birthday}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="participant"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
